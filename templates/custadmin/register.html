@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        a{
+            color: aliceblue;
+            text-decoration-line: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form  method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1>Registration</h1>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" name="username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-field">
+                    <input type="Password" placeholder="Password" name="password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-field">
+                    <input type="Password" placeholder="Confirm Password" name="cpassword" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                {% comment %} <div class="input-field">
+                    <input type="file" name="profile_pic" accept="image/*">
+                    <i class='bx bxs-lock-alt'></i>
+                </div> {% endcomment %}
+            </div>
+            <label><input type="checkbox">I hereby declare that above information provided is true and correct. </label>
+            <br><br>
+            <button type="submit" class="btn">Register</button>
+            <p style="padding:5px;text-align:center;"> Already have an Account? <a href="{% url 'login' %}" >Login</a>
+    
+        </form>
+    </div>
+</body>
+</html>

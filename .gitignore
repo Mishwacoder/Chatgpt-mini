@@ -1,0 +1,19 @@
+# 👇 Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# 👇 Ignore Virtual Environments
+venv/
+env/
+
+# 👇 Ignore SQLite Database
+*.sqlite3
+
+# 👇 Ignore Secrets 
+.env
+
+# 👇 Ignore Editor/OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
